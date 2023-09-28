@@ -14,6 +14,7 @@ struct FlickVibeApp: App {
         WindowGroup {
             HomeView(store: Store(initialState: HomeFeature.State()) {
                 HomeFeature()
+                    ._printChanges()
             })
         }
     }
