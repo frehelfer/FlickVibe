@@ -11,6 +11,7 @@
 		8DF0D9E92AC5F5E6001A0A9E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF0D9E82AC5F5E6001A0A9E /* ContentView.swift */; };
 		8DF0D9EB2AC5F5E9001A0A9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DF0D9EA2AC5F5E9001A0A9E /* Assets.xcassets */; };
 		8DF0D9EE2AC5F5E9001A0A9E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DF0D9ED2AC5F5E9001A0A9E /* Preview Assets.xcassets */; };
+		8DFDDA0E2AC6020A00BA2D39 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 8DFDDA0D2AC6020A00BA2D39 /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DFDDA0E2AC6020A00BA2D39 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = FlickVibe;
+			packageProductDependencies = (
+				8DFDDA0D2AC6020A00BA2D39 /* ComposableArchitecture */,
+			);
 			productName = FlickVibe;
 			productReference = 8DF0D9E32AC5F5E6001A0A9E /* FlickVibe.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = 8DF0D9DA2AC5F5E6001A0A9E;
+			packageReferences = (
+				8DFDDA0C2AC6020A00BA2D39 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 8DF0D9E42AC5F5E6001A0A9E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -339,6 +347,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8DFDDA0C2AC6020A00BA2D39 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:pointfreeco/swift-composable-architecture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8DFDDA0D2AC6020A00BA2D39 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DFDDA0C2AC6020A00BA2D39 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8DF0D9DB2AC5F5E6001A0A9E /* Project object */;
 }
