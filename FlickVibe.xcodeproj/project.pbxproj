@@ -8,18 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		8DF0D9E72AC5F5E6001A0A9E /* FlickVibeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF0D9E62AC5F5E6001A0A9E /* FlickVibeApp.swift */; };
-		8DF0D9E92AC5F5E6001A0A9E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF0D9E82AC5F5E6001A0A9E /* ContentView.swift */; };
 		8DF0D9EB2AC5F5E9001A0A9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DF0D9EA2AC5F5E9001A0A9E /* Assets.xcassets */; };
 		8DF0D9EE2AC5F5E9001A0A9E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DF0D9ED2AC5F5E9001A0A9E /* Preview Assets.xcassets */; };
 		8DFDDA0E2AC6020A00BA2D39 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 8DFDDA0D2AC6020A00BA2D39 /* ComposableArchitecture */; };
+		8DFDDA122AC603A100BA2D39 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFDDA112AC603A100BA2D39 /* HomeView.swift */; };
+		8DFDDA142AC603BD00BA2D39 /* HomeFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFDDA132AC603BD00BA2D39 /* HomeFeature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8DF0D9E32AC5F5E6001A0A9E /* FlickVibe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickVibe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DF0D9E62AC5F5E6001A0A9E /* FlickVibeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickVibeApp.swift; sourceTree = "<group>"; };
-		8DF0D9E82AC5F5E6001A0A9E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8DF0D9EA2AC5F5E9001A0A9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DF0D9ED2AC5F5E9001A0A9E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8DFDDA112AC603A100BA2D39 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8DFDDA132AC603BD00BA2D39 /* HomeFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				8DF0D9E62AC5F5E6001A0A9E /* FlickVibeApp.swift */,
-				8DF0D9E82AC5F5E6001A0A9E /* ContentView.swift */,
+				8DFDDA102AC6039400BA2D39 /* Home */,
 				8DF0D9EA2AC5F5E9001A0A9E /* Assets.xcassets */,
 				8DF0D9EC2AC5F5E9001A0A9E /* Preview Content */,
 			);
@@ -67,6 +69,15 @@
 				8DF0D9ED2AC5F5E9001A0A9E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8DFDDA102AC6039400BA2D39 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8DFDDA132AC603BD00BA2D39 /* HomeFeature.swift */,
+				8DFDDA112AC603A100BA2D39 /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,8 +156,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DF0D9E92AC5F5E6001A0A9E /* ContentView.swift in Sources */,
+				8DFDDA142AC603BD00BA2D39 /* HomeFeature.swift in Sources */,
 				8DF0D9E72AC5F5E6001A0A9E /* FlickVibeApp.swift in Sources */,
+				8DFDDA122AC603A100BA2D39 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
