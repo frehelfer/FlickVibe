@@ -8,5 +8,5 @@
 import Foundation
 
 enum Constants {
-    static let apiKey: String = "Your key here"
+    static let accessTokenAuth: String = "Your key here"
 }
