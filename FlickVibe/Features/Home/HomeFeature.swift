@@ -12,7 +12,7 @@ struct HomeFeature: Reducer {
     @Dependency(\.apiClient) var apiClient
     
     struct State: Equatable {
-        var movies: [Movie] = []
+        var movies: IdentifiedArrayOf<Movie> = []
     }
     
     enum Action: Equatable {
@@ -33,7 +33,7 @@ struct HomeFeature: Reducer {
                 }
                 
             case let .movieRequestResult(.success(response)):
-                state.movies = response
+                state.movies = IdentifiedArray(uniqueElements: response)
                 return .none
                 
             case let .movieRequestResult(.failure(error)):

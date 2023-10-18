@@ -16,7 +16,7 @@ struct FlickVibeApp: App {
     init() {
         self.store = Store(
             initialState: AppFeature.State(),
-            reducer: { AppFeature() }
+            reducer: { AppFeature()._printChanges() }
         )
     }
     

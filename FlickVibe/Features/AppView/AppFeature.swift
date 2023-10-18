@@ -28,6 +28,9 @@ struct AppFeature: Reducer {
     
     var body: some ReducerOf<Self> {
         
+        Scope(state: \.homeState, action: /Action.homeAction, child: HomeFeature.init)
+        Scope(state: \.searchState, action: /Action.searchAction, child: SearchFeature.init)
+        
         Reduce { state, action in
             switch action {
                 
