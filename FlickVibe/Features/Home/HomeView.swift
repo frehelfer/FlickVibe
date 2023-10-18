@@ -17,9 +17,6 @@ struct HomeView: View {
                 Color.gray.ignoresSafeArea()
                 
                 VStack {
-                    Button("get movies") {
-                        viewStore.send(.onAppear)
-                    }
                     ScrollView(.horizontal, showsIndicators: false) {
                         LazyHStack {
                             ForEach(viewStore.movies) { movie in

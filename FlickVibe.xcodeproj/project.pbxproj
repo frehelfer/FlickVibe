@@ -15,6 +15,7 @@
 		8D9CD7512AE0558D001E6D81 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9CD7502AE0558D001E6D81 /* AppView.swift */; };
 		8D9CD7542AE07F0D001E6D81 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9CD7532AE07F0D001E6D81 /* SearchView.swift */; };
 		8D9CD7562AE07F1B001E6D81 /* SearchFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9CD7552AE07F1B001E6D81 /* SearchFeature.swift */; };
+		8D9CD7592AE0959C001E6D81 /* MovieCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9CD7582AE0959B001E6D81 /* MovieCardView.swift */; };
 		8DF0D9E72AC5F5E6001A0A9E /* FlickVibeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF0D9E62AC5F5E6001A0A9E /* FlickVibeApp.swift */; };
 		8DF0D9EB2AC5F5E9001A0A9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DF0D9EA2AC5F5E9001A0A9E /* Assets.xcassets */; };
 		8DF0D9EE2AC5F5E9001A0A9E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DF0D9ED2AC5F5E9001A0A9E /* Preview Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		8D9CD7502AE0558D001E6D81 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		8D9CD7532AE07F0D001E6D81 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		8D9CD7552AE07F1B001E6D81 /* SearchFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFeature.swift; sourceTree = "<group>"; };
+		8D9CD7582AE0959B001E6D81 /* MovieCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCardView.swift; sourceTree = "<group>"; };
 		8DF0D9E32AC5F5E6001A0A9E /* FlickVibe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickVibe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DF0D9E62AC5F5E6001A0A9E /* FlickVibeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickVibeApp.swift; sourceTree = "<group>"; };
 		8DF0D9EA2AC5F5E9001A0A9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 		8D9CD73F2AE0130C001E6D81 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				8D9CD7572AE0955F001E6D81 /* Components */,
 				8D9CD74D2AE052D6001E6D81 /* AppView */,
 				8DFDDA102AC6039400BA2D39 /* Home */,
 				8D9CD7522AE07EC0001E6D81 /* Search */,
@@ -109,6 +112,14 @@
 				8D9CD7532AE07F0D001E6D81 /* SearchView.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		8D9CD7572AE0955F001E6D81 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8D9CD7582AE0959B001E6D81 /* MovieCardView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		8DF0D9DA2AC5F5E6001A0A9E = {
@@ -247,6 +258,7 @@
 				8D9CD74F2AE0533D001E6D81 /* AppFeature.swift in Sources */,
 				8DFDDA142AC603BD00BA2D39 /* HomeFeature.swift in Sources */,
 				8DF0D9E72AC5F5E6001A0A9E /* FlickVibeApp.swift in Sources */,
+				8D9CD7592AE0959C001E6D81 /* MovieCardView.swift in Sources */,
 				8D9CD7542AE07F0D001E6D81 /* SearchView.swift in Sources */,
 				8DFDDA172AC6119B00BA2D39 /* TrendingMovie.swift in Sources */,
 				8D9CD7472AE01818001E6D81 /* ApiClient.swift in Sources */,
