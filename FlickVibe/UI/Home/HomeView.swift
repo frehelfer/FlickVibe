@@ -38,7 +38,13 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView(store: Store(initialState: HomeFeature.State()) {
-        HomeFeature()
-    })
+    HomeView(
+        store: Store(
+            initialState: HomeFeature.State(),
+            reducer: {
+                HomeFeature()
+                    .dependency(\.movieClient, .liveValue)
+            }
+        )
+    )
 }

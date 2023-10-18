@@ -100,4 +100,10 @@ extension Movie {
         voteCount: 8
     )
     
+    static let mockList = [
+        Movie.mock,
+        Movie.mock2,
+        Movie.mock3
+    ]
+    
 }

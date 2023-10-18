@@ -9,6 +9,7 @@ import ComposableArchitecture
 import Foundation
 
 struct HomeFeature: Reducer {
+    @Dependency(\.movieClient) var movieClient
     
     struct State: Equatable {
         var movies: [Movie] = []
@@ -16,7 +17,7 @@ struct HomeFeature: Reducer {
     
     enum Action {
         case onAppear
-        case movieRequestResult(TrendingMovie)
+        case movieRequestResult(TaskResult<[Movie]>)
     }
     
     var body: some ReducerOf<Self> {
@@ -27,23 +28,16 @@ struct HomeFeature: Reducer {
                 guard state.movies.isEmpty else {
                     return .none
                 }
-                
                 return .run { send in
-                    
-                    
-                    let url = URL(string: "https://api.themoviedb.org/3/trending/movie/day")!
-                    var request = URLRequest(url: url)
-                    request.httpMethod = "GET"
-//                    request.allHTTPHeaderFields = headers
-                    
-                    let (data, _) = try await URLSession.shared.data(for: request)
-                    let decoded = try JSONDecoder().decode(TrendingMovie.self, from: data)
-                    
-                    await send(.movieRequestResult(decoded))
+                    await send(.movieRequestResult(TaskResult { try await movieClient.getTrendingMovies() }))
                 }
                 
-            case .movieRequestResult(let result):
-                state.movies = result.results
+            case let .movieRequestResult(.success(response)):
+                state.movies = response
+                return .none
+                
+            case let .movieRequestResult(.failure(error)):
+                print(error)
                 return .none
             }
         }

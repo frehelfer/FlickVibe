@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8D9CD7432AE014FF001E6D81 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9CD7422AE014FF001E6D81 /* Constants.swift */; };
+		8D9CD7472AE01818001E6D81 /* MovieClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9CD7462AE01818001E6D81 /* MovieClient.swift */; };
 		8DF0D9E72AC5F5E6001A0A9E /* FlickVibeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF0D9E62AC5F5E6001A0A9E /* FlickVibeApp.swift */; };
 		8DF0D9EB2AC5F5E9001A0A9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DF0D9EA2AC5F5E9001A0A9E /* Assets.xcassets */; };
 		8DF0D9EE2AC5F5E9001A0A9E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DF0D9ED2AC5F5E9001A0A9E /* Preview Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		8D9CD7422AE014FF001E6D81 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8D9CD7462AE01818001E6D81 /* MovieClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieClient.swift; sourceTree = "<group>"; };
 		8DF0D9E32AC5F5E6001A0A9E /* FlickVibe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickVibe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DF0D9E62AC5F5E6001A0A9E /* FlickVibeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickVibeApp.swift; sourceTree = "<group>"; };
 		8DF0D9EA2AC5F5E9001A0A9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +61,22 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		8D9CD7442AE017DB001E6D81 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				8D9CD7452AE017F1001E6D81 /* Networking */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		8D9CD7452AE017F1001E6D81 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8D9CD7462AE01818001E6D81 /* MovieClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		8DF0D9DA2AC5F5E6001A0A9E = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +98,7 @@
 			children = (
 				8DF0D9E62AC5F5E6001A0A9E /* FlickVibeApp.swift */,
 				8D9CD73E2AE012D1001E6D81 /* Resources */,
+				8D9CD7442AE017DB001E6D81 /* Dependencies */,
 				8DFDDA152AC6117700BA2D39 /* Models */,
 				8D9CD73F2AE0130C001E6D81 /* UI */,
 				8DF0D9EC2AC5F5E9001A0A9E /* Preview Content */,
@@ -192,6 +211,7 @@
 				8DFDDA142AC603BD00BA2D39 /* HomeFeature.swift in Sources */,
 				8DF0D9E72AC5F5E6001A0A9E /* FlickVibeApp.swift in Sources */,
 				8DFDDA172AC6119B00BA2D39 /* TrendingMovie.swift in Sources */,
+				8D9CD7472AE01818001E6D81 /* MovieClient.swift in Sources */,
 				8DFDDA192AC611AC00BA2D39 /* Movie.swift in Sources */,
 				8DFDDA122AC603A100BA2D39 /* HomeView.swift in Sources */,
 				8D9CD7432AE014FF001E6D81 /* Constants.swift in Sources */,
