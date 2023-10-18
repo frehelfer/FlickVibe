@@ -9,7 +9,7 @@ import ComposableArchitecture
 import Foundation
 
 struct HomeFeature: Reducer {
-    @Dependency(\.movieClient) var movieClient
+    @Dependency(\.apiClient) var apiClient
     
     struct State: Equatable {
         var movies: [Movie] = []
@@ -29,7 +29,7 @@ struct HomeFeature: Reducer {
                     return .none
                 }
                 return .run { send in
-                    await send(.movieRequestResult(TaskResult { try await movieClient.getTrendingMovies() }))
+                    await send(.movieRequestResult(TaskResult { try await apiClient.getTrendingMovies() }))
                 }
                 
             case let .movieRequestResult(.success(response)):

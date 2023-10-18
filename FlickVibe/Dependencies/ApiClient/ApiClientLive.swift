@@ -1,5 +1,5 @@
 //
-//  MovieClient.swift
+//  ApiClientLive.swift
 //  FlickVibe
 //
 //  Created by Frédéric Helfer on 18/10/23.
@@ -8,36 +8,8 @@
 import ComposableArchitecture
 import Foundation
 
-// MARK: - Interface
-struct MovieClient {
-    var getTrendingMovies: @Sendable () async throws -> [Movie]
-    var getTrendingTVShows: @Sendable () async throws -> [Movie]
-}
-
-// MARK: - Dependency implementation
-extension DependencyValues {
-    var movieClient: MovieClient {
-        get { self[MovieClient.self] }
-        set { self[MovieClient.self] = newValue }
-    }
-}
-
-// MARK: - Mock
-extension MovieClient: TestDependencyKey {
-    static let previewValue: MovieClient = .init(
-        getTrendingMovies: { Movie.mockList },
-        getTrendingTVShows: { Movie.mockList }
-    )
-    
-    static let testValue: MovieClient = .init(
-        getTrendingMovies: { Movie.mockList },
-        getTrendingTVShows: { Movie.mockList }
-    )
-}
-
-// MARK: - Live
-extension MovieClient: DependencyKey {
-    static let liveValue = MovieClient(
+extension ApiClient: DependencyKey {
+    static let liveValue = ApiClient(
         getTrendingMovies: {
             
             let url = URL(string: "https://api.themoviedb.org/3/trending/movie/day")!

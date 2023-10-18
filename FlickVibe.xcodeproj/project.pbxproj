@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8D9CD7432AE014FF001E6D81 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9CD7422AE014FF001E6D81 /* Constants.swift */; };
-		8D9CD7472AE01818001E6D81 /* MovieClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9CD7462AE01818001E6D81 /* MovieClient.swift */; };
+		8D9CD7472AE01818001E6D81 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9CD7462AE01818001E6D81 /* ApiClient.swift */; };
+		8D9CD7492AE044EF001E6D81 /* ApiClientLive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9CD7482AE044EF001E6D81 /* ApiClientLive.swift */; };
+		8D9CD74B2AE044F8001E6D81 /* ApiClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9CD74A2AE044F8001E6D81 /* ApiClientMock.swift */; };
 		8DF0D9E72AC5F5E6001A0A9E /* FlickVibeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF0D9E62AC5F5E6001A0A9E /* FlickVibeApp.swift */; };
 		8DF0D9EB2AC5F5E9001A0A9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DF0D9EA2AC5F5E9001A0A9E /* Assets.xcassets */; };
 		8DF0D9EE2AC5F5E9001A0A9E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DF0D9ED2AC5F5E9001A0A9E /* Preview Assets.xcassets */; };
@@ -21,7 +23,9 @@
 
 /* Begin PBXFileReference section */
 		8D9CD7422AE014FF001E6D81 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		8D9CD7462AE01818001E6D81 /* MovieClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieClient.swift; sourceTree = "<group>"; };
+		8D9CD7462AE01818001E6D81 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		8D9CD7482AE044EF001E6D81 /* ApiClientLive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientLive.swift; sourceTree = "<group>"; };
+		8D9CD74A2AE044F8001E6D81 /* ApiClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientMock.swift; sourceTree = "<group>"; };
 		8DF0D9E32AC5F5E6001A0A9E /* FlickVibe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickVibe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DF0D9E62AC5F5E6001A0A9E /* FlickVibeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickVibeApp.swift; sourceTree = "<group>"; };
 		8DF0D9EA2AC5F5E9001A0A9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,17 +68,19 @@
 		8D9CD7442AE017DB001E6D81 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				8D9CD7452AE017F1001E6D81 /* Networking */,
+				8D9CD7452AE017F1001E6D81 /* ApiClient */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
 		};
-		8D9CD7452AE017F1001E6D81 /* Networking */ = {
+		8D9CD7452AE017F1001E6D81 /* ApiClient */ = {
 			isa = PBXGroup;
 			children = (
-				8D9CD7462AE01818001E6D81 /* MovieClient.swift */,
+				8D9CD7462AE01818001E6D81 /* ApiClient.swift */,
+				8D9CD7482AE044EF001E6D81 /* ApiClientLive.swift */,
+				8D9CD74A2AE044F8001E6D81 /* ApiClientMock.swift */,
 			);
-			path = Networking;
+			path = ApiClient;
 			sourceTree = "<group>";
 		};
 		8DF0D9DA2AC5F5E6001A0A9E = {
@@ -211,10 +217,12 @@
 				8DFDDA142AC603BD00BA2D39 /* HomeFeature.swift in Sources */,
 				8DF0D9E72AC5F5E6001A0A9E /* FlickVibeApp.swift in Sources */,
 				8DFDDA172AC6119B00BA2D39 /* TrendingMovie.swift in Sources */,
-				8D9CD7472AE01818001E6D81 /* MovieClient.swift in Sources */,
+				8D9CD7472AE01818001E6D81 /* ApiClient.swift in Sources */,
+				8D9CD74B2AE044F8001E6D81 /* ApiClientMock.swift in Sources */,
 				8DFDDA192AC611AC00BA2D39 /* Movie.swift in Sources */,
 				8DFDDA122AC603A100BA2D39 /* HomeView.swift in Sources */,
 				8D9CD7432AE014FF001E6D81 /* Constants.swift in Sources */,
+				8D9CD7492AE044EF001E6D81 /* ApiClientLive.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

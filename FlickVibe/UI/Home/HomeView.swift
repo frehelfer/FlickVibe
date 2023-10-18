@@ -43,7 +43,7 @@ struct HomeView: View {
             initialState: HomeFeature.State(),
             reducer: {
                 HomeFeature()
-                    .dependency(\.movieClient, .liveValue)
+                    .dependency(\.apiClient, .liveValue)
             }
         )
     )
