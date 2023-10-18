@@ -39,12 +39,10 @@ struct HomeView: View {
 
 #Preview {
     HomeView(
-        store: Store(
-            initialState: HomeFeature.State(),
-            reducer: {
-                HomeFeature()
-                    .dependency(\.apiClient, .liveValue)
-            }
-        )
+        store: Store(initialState: HomeFeature.State()) {
+            HomeFeature()
+        } withDependencies: {
+            $0.apiClient = .liveValue
+        }
     )
 }
