@@ -15,7 +15,7 @@ struct HomeFeature: Reducer {
         var movies: [Movie] = []
     }
     
-    enum Action {
+    enum Action: Equatable {
         case onAppear
         case movieRequestResult(TaskResult<[Movie]>)
     }
