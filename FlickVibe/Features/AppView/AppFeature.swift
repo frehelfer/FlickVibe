@@ -23,7 +23,6 @@ struct AppFeature: Reducer {
     enum Action: Equatable {
         case homeAction(HomeFeature.Action)
         case searchAction(SearchFeature.Action)
-        case search
         case selectedTab
     }
     
@@ -31,10 +30,13 @@ struct AppFeature: Reducer {
         
         Reduce { state, action in
             switch action {
-            case .homeAction:
+                
+            case .homeAction(_):
                 return .none
-            case .search:
+                
+            case .searchAction(_):
                 return .none
+                
             case .selectedTab:
                 return .none
             }

@@ -11,18 +11,18 @@ import SwiftUI
 @main
 struct FlickVibeApp: App {
     
-    let store: StoreOf<HomeFeature>
+    let store: StoreOf<AppFeature>
     
     init() {
         self.store = Store(
-            initialState: HomeFeature.State(),
-            reducer: { HomeFeature() }
+            initialState: AppFeature.State(),
+            reducer: { AppFeature() }
         )
     }
     
     var body: some Scene {
         WindowGroup {
-            HomeView(store: store)
+            AppView(store: store)
         }
     }
 }

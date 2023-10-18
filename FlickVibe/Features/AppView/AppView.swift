@@ -62,8 +62,7 @@ struct AppView: View {
     AppView(
         store: Store(
             initialState: AppFeature.State(),
-            reducer: { AppFeature() },
-            withDependencies: { $0.apiClient = .liveValue }
+            reducer: { AppFeature() }
         )
     )
 }
