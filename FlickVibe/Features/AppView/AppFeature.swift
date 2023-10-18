@@ -12,7 +12,7 @@ struct AppFeature: Reducer {
     
     struct State: Equatable {
         var homeState = HomeFeature.State()
-        var searchState = HomeFeature.State()
+        var searchState = SearchFeature.State()
         
         var selectedTab: Tab = .home
         enum Tab {
@@ -22,6 +22,7 @@ struct AppFeature: Reducer {
     
     enum Action: Equatable {
         case homeAction(HomeFeature.Action)
+        case searchAction(SearchFeature.Action)
         case search
         case selectedTab
     }

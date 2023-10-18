@@ -28,28 +28,31 @@ struct AppView: View {
                 )
             ) {
                 
-                HomeView(
-                    store: self.store.scope(
-                        state: \.homeState,
-                        action: AppFeature.Action.homeAction
+                Group {
+                    HomeView(
+                        store: self.store.scope(
+                            state: \.homeState,
+                            action: AppFeature.Action.homeAction
+                        )
                     )
-                )
-                .tabItem {
-                    Label("Home", systemImage: "house")
-                }
-                .tag(AppFeature.State.Tab.home)
-                
-                HomeView(
-                    store: Store(initialState: HomeFeature.State()) {
-                        HomeFeature()
-                    } withDependencies: {
-                        $0.apiClient = .previewValue
+                    .tabItem {
+                        Label("Home", systemImage: "house")
                     }
-                )
-                .tabItem {
-                    Label("Search", systemImage: "magnifyingglass")
+                    .tag(AppFeature.State.Tab.home)
+                    
+                    SearchView(
+                        store: self.store.scope(
+                            state: \.searchState,
+                            action: AppFeature.Action.searchAction
+                        )
+                    )
+                    .tabItem {
+                        Label("Search", systemImage: "magnifyingglass")
+                    }
+                    .tag(AppFeature.State.Tab.search)
                 }
-                .tag(AppFeature.State.Tab.search)
+                .toolbarBackground(.black, for: .tabBar)
+                .toolbarBackground(.visible, for: .tabBar)
             }
         }
     }
