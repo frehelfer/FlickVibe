@@ -13,12 +13,14 @@ struct MovieCardView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             
-            RoundedRectangle(cornerRadius: 20)
-                .fill(Color.secondary)
-                .frame(width: 150, height: 200)
-                .overlay {
-                    Circle()
-                }
+            ZStack(alignment: .bottomLeading) {
+                RoundedRectangle(cornerRadius: 15)
+                    .fill(Color.secondary)
+                    .frame(width: 160, height: 210)
+                
+                ScoreView(score: movie.voteAverage)
+                    .offset(x: 15, y: 15)
+            }
             
             Text(movie.title)
                 .font(.headline).bold()
