@@ -7,6 +7,6 @@
 
 import Foundation
 
-enum Constants {
-    static let accessTokenAuth: String = "Your key here"
+public enum Constants {
+    public static let accessTokenAuth: String = "Rour Key here"
 }

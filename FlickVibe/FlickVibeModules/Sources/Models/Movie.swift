@@ -7,22 +7,22 @@
 
 import Foundation
 
-struct Movie: Codable, Equatable, Identifiable {
-    let adult: Bool
-    let backdropPath: String?
-    let id: Int
-    let title: String
-    let originalLanguage: String
-    let originalTitle: String
-    let overview: String
-    let posterPath: String?
-    let mediaType: String
-    let genreIds: [Int]
-    let popularity: Double
-    let releaseDate: String
-    let video: Bool
-    let voteAverage: Double
-    let voteCount: Int
+public struct Movie: Codable, Equatable, Identifiable {
+    public let adult: Bool
+    public let backdropPath: String?
+    public let id: Int
+    public let title: String
+    public let originalLanguage: String
+    public let originalTitle: String
+    public let overview: String
+    public let posterPath: String?
+    public let mediaType: String
+    public let genreIds: [Int]
+    public let popularity: Double
+    public let releaseDate: String
+    public let video: Bool
+    public let voteAverage: Double
+    public let voteCount: Int
     
     enum CodingKeys: String, CodingKey {
         case adult
@@ -44,7 +44,7 @@ struct Movie: Codable, Equatable, Identifiable {
 }
 
 // MARK: - Mocks
-extension Movie {
+public extension Movie {
     
     static let mock = Movie(
         adult: false,

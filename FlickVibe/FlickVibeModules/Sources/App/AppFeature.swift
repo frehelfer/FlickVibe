@@ -7,10 +7,12 @@
 
 import ComposableArchitecture
 import Foundation
+import Home
+import Search
 
-struct AppFeature: Reducer {
+public struct AppFeature: Reducer {
     
-    struct State: Equatable {
+    public struct State: Equatable {
         var homeState = HomeFeature.State()
         var searchState = SearchFeature.State()
         
@@ -18,15 +20,19 @@ struct AppFeature: Reducer {
         enum Tab {
             case home, search
         }
+        
+        public init() {}
     }
     
-    enum Action: Equatable {
+    public enum Action: Equatable {
         case homeAction(HomeFeature.Action)
         case searchAction(SearchFeature.Action)
         case selectedTab
     }
     
-    var body: some ReducerOf<Self> {
+    public init() {}
+    
+    public var body: some ReducerOf<Self> {
         
         Scope(state: \.homeState, action: /Action.homeAction, child: HomeFeature.init)
         Scope(state: \.searchState, action: /Action.searchAction, child: SearchFeature.init)

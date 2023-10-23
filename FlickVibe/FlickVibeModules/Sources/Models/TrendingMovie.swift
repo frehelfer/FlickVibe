@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct TrendingMovie: Codable {
-    let page: Int
-    let results: [Movie]
-    let totalPages: Int
-    let totalResults: Int
+public struct TrendingMovie: Codable {
+    public let page: Int
+    public let results: [Movie]
+    public let totalPages: Int
+    public let totalResults: Int
 
     enum CodingKeys: String, CodingKey {
         case page

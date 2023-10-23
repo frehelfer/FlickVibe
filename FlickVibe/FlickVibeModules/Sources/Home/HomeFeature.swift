@@ -7,20 +7,25 @@
 
 import ComposableArchitecture
 import Foundation
+import Models
 
-struct HomeFeature: Reducer {
+public struct HomeFeature: Reducer {
     @Dependency(\.apiClient) var apiClient
     
-    struct State: Equatable {
-        var movies: IdentifiedArrayOf<Movie> = []
+    public struct State: Equatable {
+        public var movies: IdentifiedArrayOf<Movie> = []
+        
+        public init() {}
     }
     
-    enum Action: Equatable {
+    public enum Action: Equatable {
         case onAppear
         case movieRequestResult(TaskResult<[Movie]>)
     }
     
-    var body: some ReducerOf<Self> {
+    public init() {}
+    
+    public var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
                 

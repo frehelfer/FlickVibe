@@ -7,16 +7,17 @@
 
 import ComposableArchitecture
 import Foundation
+import Models
 
 // MARK: - Interface
-struct ApiClient {
-    var getTrendingMovies: @Sendable () async throws -> [Movie]
-    var getTrendingTVShows: @Sendable () async throws -> [Movie]
+public struct ApiClient {
+    public var getTrendingMovies: @Sendable () async throws -> [Movie]
+    public var getTrendingTVShows: @Sendable () async throws -> [Movie]
 }
 
 // MARK: - Dependency implementation
 extension DependencyValues {
-    var apiClient: ApiClient {
+    public var apiClient: ApiClient {
         get { self[ApiClient.self] }
         set { self[ApiClient.self] = newValue }
     }

@@ -8,10 +8,14 @@
 import ComposableArchitecture
 import SwiftUI
 
-struct SearchView: View {
+public struct SearchView: View {
     let store: StoreOf<SearchFeature>
     
-    var body: some View {
+    public init(store: StoreOf<SearchFeature>) {
+        self.store = store
+    }
+    
+    public var body: some View {
         WithViewStore(self.store, observe: { $0 }) { viewStore in
             ZStack {
                 Color.red.ignoresSafeArea()

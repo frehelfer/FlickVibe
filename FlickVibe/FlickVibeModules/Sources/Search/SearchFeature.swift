@@ -8,17 +8,21 @@
 import ComposableArchitecture
 import Foundation
 
-struct SearchFeature: Reducer {
+public struct SearchFeature: Reducer {
     
-    struct State: Equatable {
+    public struct State: Equatable {
+        
+        
+        public init() {}
+    }
+    
+    public enum Action: Equatable {
         
     }
     
-    enum Action: Equatable {
-        
-    }
+    public init() {}
     
-    var body: some ReducerOf<Self> {
+    public var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
                 

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Models
 
 struct MovieCardView: View {
     let movie: Movie

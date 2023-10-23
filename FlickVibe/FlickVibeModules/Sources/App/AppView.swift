@@ -7,9 +7,15 @@
 
 import ComposableArchitecture
 import SwiftUI
+import Home
+import Search
 
-struct AppView: View {
+public struct AppView: View {
     let store: StoreOf<AppFeature>
+    
+    public init(store: StoreOf<AppFeature>) {
+        self.store = store
+    }
     
     // to observe just the tab selected
     struct ViewState: Equatable {
@@ -19,7 +25,7 @@ struct AppView: View {
         }
     }
     
-    var body: some View {
+    public var body: some View {
         WithViewStore(self.store, observe: ViewState.init) { viewStore in
             TabView(
                 selection: viewStore.binding(

@@ -7,15 +7,16 @@
 
 import ComposableArchitecture
 import Foundation
+import Models
 
 // MARK: - Mock
 extension ApiClient: TestDependencyKey {
-    static let previewValue: ApiClient = .init(
+    public static let previewValue: ApiClient = .init(
         getTrendingMovies: { Movie.mockList },
         getTrendingTVShows: { Movie.mockList }
     )
     
-    static let testValue: ApiClient = .init(
+    public static let testValue: ApiClient = .init(
         getTrendingMovies: { Movie.mockList },
         getTrendingTVShows: { Movie.mockList }
     )

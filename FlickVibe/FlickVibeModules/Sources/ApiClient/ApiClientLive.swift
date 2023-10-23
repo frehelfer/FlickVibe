@@ -6,10 +6,12 @@
 //
 
 import ComposableArchitecture
+import DesignSystem
 import Foundation
+import Models
 
 extension ApiClient: DependencyKey {
-    static let liveValue = ApiClient(
+    public static let liveValue = ApiClient(
         getTrendingMovies: {
             
             let url = URL(string: "https://api.themoviedb.org/3/trending/movie/day")!

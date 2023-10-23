@@ -8,10 +8,14 @@
 import ComposableArchitecture
 import SwiftUI
 
-struct HomeView: View {
+public struct HomeView: View {
     var store: StoreOf<HomeFeature>
     
-    var body: some View {
+    public init(store: StoreOf<HomeFeature>) {
+        self.store = store
+    }
+    
+    public var body: some View {
         WithViewStore(self.store, observe: { $0 }) { viewStore in
             ZStack(alignment: .top) {
                 Color.gray.ignoresSafeArea()
@@ -36,6 +40,8 @@ struct HomeView: View {
         }
     }
 }
+
+import ApiClient
 
 #Preview {
     HomeView(
