@@ -17,7 +17,7 @@ public struct MainTabFeature: Reducer {
         var searchState = SearchFeature.State()
         
         var selectedTab: Tab = .home
-        enum Tab {
+        public enum Tab {
             case home, search
         }
         
@@ -27,7 +27,8 @@ public struct MainTabFeature: Reducer {
     public enum Action: Equatable {
         case homeAction(HomeFeature.Action)
         case searchAction(SearchFeature.Action)
-        case selectedTab
+        
+        case tabSelected(State.Tab)
     }
     
     public init() {}
@@ -46,7 +47,8 @@ public struct MainTabFeature: Reducer {
             case .searchAction(_):
                 return .none
                 
-            case .selectedTab:
+            case .tabSelected(let selectedTab):
+                state.selectedTab = selectedTab
                 return .none
             }
         }

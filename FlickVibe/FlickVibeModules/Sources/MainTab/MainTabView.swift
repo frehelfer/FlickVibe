@@ -28,10 +28,7 @@ public struct MainTabView: View {
     public var body: some View {
         WithViewStore(self.store, observe: ViewState.init) { viewStore in
             TabView(
-                selection: viewStore.binding(
-                    get: \.selectedTab,
-                    send: MainTabFeature.Action.selectedTab
-                )
+                selection: viewStore.binding(get: \.selectedTab, send: { .tabSelected($0) })
             ) {
                 
                 Group {
@@ -68,7 +65,7 @@ public struct MainTabView: View {
     MainTabView(
         store: Store(
             initialState: MainTabFeature.State(),
-            reducer: { MainTabFeature() }
+            reducer: { MainTabFeature()._printChanges() }
         )
     )
 }
