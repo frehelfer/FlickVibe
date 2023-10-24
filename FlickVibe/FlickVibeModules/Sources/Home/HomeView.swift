@@ -7,6 +7,7 @@
 
 import ComposableArchitecture
 import SwiftUI
+import DesignSystem
 
 public struct HomeView: View {
     var store: StoreOf<HomeFeature>
@@ -22,15 +23,12 @@ public struct HomeView: View {
                 
                 VStack {
                     ScrollView(.horizontal, showsIndicators: false) {
-                        LazyHStack {
+                        LazyHStack(alignment: .top) {
                             ForEach(viewStore.movies) { movie in
-                                VStack {
-                                    Text(movie.title)
-                                }
-                                .frame(width: 100, height: 150)
-                                .background(Color.red)
+                                MovieCardView(movie: movie)
                             }
                         }
+                        .padding(8)
                     }
                 }
             }

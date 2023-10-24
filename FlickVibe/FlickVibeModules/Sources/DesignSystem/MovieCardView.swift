@@ -8,10 +8,14 @@
 import SwiftUI
 import Models
 
-struct MovieCardView: View {
+public struct MovieCardView: View {
     let movie: Movie
     
-    var body: some View {
+    public init(movie: Movie) {
+        self.movie = movie
+    }
+    
+    public var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             
             ZStack(alignment: .bottomLeading) {
@@ -25,10 +29,12 @@ struct MovieCardView: View {
             
             Text(movie.title)
                 .font(.headline).bold()
-                .lineLimit(nil)
+                .lineLimit(2)
+                .minimumScaleFactor(0.7)
                 .multilineTextAlignment(.leading)
                 .padding(.horizontal)
         }
+        .frame(width: 160)
     }
 }
 
