@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8D1C522D2AE6EEFB00748B4A /* App in Frameworks */ = {isa = PBXBuildFile; productRef = 8D1C522C2AE6EEFB00748B4A /* App */; };
+		8D1C522F2AE7DD2F00748B4A /* MainTab in Frameworks */ = {isa = PBXBuildFile; productRef = 8D1C522E2AE7DD2F00748B4A /* MainTab */; };
 		8DF0D9E72AC5F5E6001A0A9E /* FlickVibeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF0D9E62AC5F5E6001A0A9E /* FlickVibeApp.swift */; };
 		8DFDDA0E2AC6020A00BA2D39 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 8DFDDA0D2AC6020A00BA2D39 /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
@@ -23,8 +23,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D1C522D2AE6EEFB00748B4A /* App in Frameworks */,
 				8DFDDA0E2AC6020A00BA2D39 /* ComposableArchitecture in Frameworks */,
+				8D1C522F2AE7DD2F00748B4A /* MainTab in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +82,7 @@
 			name = FlickVibe;
 			packageProductDependencies = (
 				8DFDDA0D2AC6020A00BA2D39 /* ComposableArchitecture */,
-				8D1C522C2AE6EEFB00748B4A /* App */,
+				8D1C522E2AE7DD2F00748B4A /* MainTab */,
 			);
 			productName = FlickVibe;
 			productReference = 8DF0D9E32AC5F5E6001A0A9E /* FlickVibe.app */;
@@ -353,9 +353,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8D1C522C2AE6EEFB00748B4A /* App */ = {
+		8D1C522E2AE7DD2F00748B4A /* MainTab */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = App;
+			productName = MainTab;
 		};
 		8DFDDA0D2AC6020A00BA2D39 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;

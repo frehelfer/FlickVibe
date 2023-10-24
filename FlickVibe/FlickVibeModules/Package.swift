@@ -9,9 +9,9 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(name: "ApiClient", targets: ["ApiClient"]),
-        .library(name: "App", targets: ["App"]),
         .library(name: "DesignSystem", targets: ["DesignSystem"]),
         .library(name: "Home", targets: ["Home"]),
+        .library(name: "MainTab", targets: ["MainTab"]),
         .library(name: "Models", targets: ["Models"]),
         .library(name: "Search", targets: ["Search"])
     ],
@@ -36,17 +36,6 @@ let package = Package(
             ]
         ),
         .target(
-            name: "App",
-            dependencies: [
-                "Home",
-                "Search",
-                .product(
-                    name: "ComposableArchitecture",
-                    package: "swift-composable-architecture"
-                )
-            ]
-        ),
-        .target(
             name: "DesignSystem",
             dependencies: ["Models"]
         ),
@@ -59,6 +48,17 @@ let package = Package(
             dependencies: [
                 "ApiClient",
                 "DesignSystem",
+                .product(
+                    name: "ComposableArchitecture",
+                    package: "swift-composable-architecture"
+                )
+            ]
+        ),
+        .target(
+            name: "MainTab",
+            dependencies: [
+                "Home",
+                "Search",
                 .product(
                     name: "ComposableArchitecture",
                     package: "swift-composable-architecture"

@@ -1,5 +1,5 @@
 //
-//  AppFeature.swift
+//  MainTabFeature.swift
 //  FlickVibe
 //
 //  Created by Frédéric Helfer on 18/10/23.
@@ -10,7 +10,7 @@ import Foundation
 import Home
 import Search
 
-public struct AppFeature: Reducer {
+public struct MainTabFeature: Reducer {
     
     public struct State: Equatable {
         var homeState = HomeFeature.State()

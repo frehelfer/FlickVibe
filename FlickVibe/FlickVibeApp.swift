@@ -5,25 +5,25 @@
 //  Created by Frédéric Helfer on 28/09/23.
 //
 
-import App
 import ComposableArchitecture
+import MainTab
 import SwiftUI
 
 @main
 struct FlickVibeApp: App {
     
-    let store: StoreOf<AppFeature>
+    let store: StoreOf<MainTabFeature>
     
     init() {
         self.store = Store(
-            initialState: AppFeature.State(),
-            reducer: { AppFeature()._printChanges() }
+            initialState: MainTabFeature.State(),
+            reducer: { MainTabFeature()._printChanges() }
         )
     }
     
     var body: some Scene {
         WindowGroup {
-            AppView(store: store)
+            MainTabView(store: store)
         }
     }
 }
