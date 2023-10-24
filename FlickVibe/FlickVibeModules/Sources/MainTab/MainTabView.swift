@@ -17,20 +17,17 @@ public struct MainTabView: View {
         self.store = store
     }
     
-    // to observe just the tab selected
     struct ViewState: Equatable {
-        let selectedTab: MainTabFeature.State.Tab
-        init(state: MainTabFeature.State) {
-            self.selectedTab = state.selectedTab
+        @BindingViewState var selectedTab: MainTabFeature.State.Tab
+        
+        init(bindingViewStore: BindingViewStore<MainTabFeature.State>) {
+            self._selectedTab = bindingViewStore.$selectedTab
         }
     }
     
     public var body: some View {
         WithViewStore(self.store, observe: ViewState.init) { viewStore in
-            TabView(
-                selection: viewStore.binding(get: \.selectedTab, send: { .tabSelected($0) })
-            ) {
-                
+            TabView(selection: viewStore.$selectedTab) {
                 Group {
                     HomeView(
                         store: self.store.scope(

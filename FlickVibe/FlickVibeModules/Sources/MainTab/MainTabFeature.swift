@@ -16,7 +16,7 @@ public struct MainTabFeature: Reducer {
         var homeState = HomeFeature.State()
         var searchState = SearchFeature.State()
         
-        var selectedTab: Tab = .home
+        @BindingState var selectedTab: Tab = .home
         public enum Tab {
             case home, search
         }
@@ -24,31 +24,31 @@ public struct MainTabFeature: Reducer {
         public init() {}
     }
     
-    public enum Action: Equatable {
+    public enum Action: Equatable, BindableAction {
+        case binding(BindingAction<State>)
+        
         case homeAction(HomeFeature.Action)
         case searchAction(SearchFeature.Action)
-        
-        case tabSelected(State.Tab)
     }
     
     public init() {}
     
     public var body: some ReducerOf<Self> {
         
+        BindingReducer()
+        
         Scope(state: \.homeState, action: /Action.homeAction, child: HomeFeature.init)
         Scope(state: \.searchState, action: /Action.searchAction, child: SearchFeature.init)
         
         Reduce { state, action in
             switch action {
+            case .binding:
+                return .none
                 
             case .homeAction(_):
                 return .none
                 
             case .searchAction(_):
-                return .none
-                
-            case .tabSelected(let selectedTab):
-                state.selectedTab = selectedTab
                 return .none
             }
         }
