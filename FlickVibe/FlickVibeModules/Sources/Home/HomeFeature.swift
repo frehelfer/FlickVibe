@@ -34,6 +34,9 @@ public struct HomeFeature: Reducer {
                     return .none
                 }
                 return .run { send in
+//                    let result = await TaskResult {
+//                        try await apiClient.getTrendingMovies()
+//                    }
                     await send(.movieRequestResult(TaskResult { try await apiClient.getTrendingMovies() }))
                 }
                 
